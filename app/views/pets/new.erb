@@ -5,5 +5,8 @@
 
   <br>
   <label> Choose an exisiting owner </label>
-  <input type='checkbox' name='pet[owner_ids][]' id='<%=owner.id%>' value='<%=owner.id%>'>
+  <%@owners.each do |owner|%>
+    <input type='checkbox' name='pet[owner_ids][]' id='<%=owner.id%>' value='<%=owner.id%>'>
+    <%=owner.name%></input>
+
 </form>
