@@ -27,9 +27,9 @@ class PetsController < ApplicationController
     @pet = Pet.find(paras[:id])
     erb :'/pets/edit'
   end
-  
-  post '/pets/:id' do
 
+  post '/pets/:id' do
+    @peet = Pet.find(params[:id])
     redirect to "pets/#{@pet.id}"
   end
 end
